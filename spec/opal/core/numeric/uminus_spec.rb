@@ -6,4 +6,9 @@ describe "Numeric#-@" do
     (--5).should == 5
     (-8).send(:-@).should == 8
   end
+
+  it "has precedence over regular instance methods" do
+    (-5.abs).should == 5
+  end
+
 end
